@@ -5,4 +5,7 @@ function controlFontSize() {
     textInput.style.fontSize = inputRange.value + "px";
 }
 
+controlFontSize();
+
 inputRange.addEventListener('input', controlFontSize);
+

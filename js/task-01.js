@@ -3,8 +3,8 @@ const categories = document.querySelectorAll('.item');
 
 console.log(`Number of categories: ${categories.length}`);
 
-// 
-categories.forEach(item => {
-    console.log(`Category: ${item.querySelector('h2').textContent}`);
-    console.log(`Elements: ${item.querySelectorAll('li').length}`);
+// 2
+categories.forEach(categories => {
+    console.log(`Category: ${categories.firstElementChild.textContent}`);
+    console.log(`Elements: ${categories.lastElementChild.childElementCount}`);
 });

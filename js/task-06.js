@@ -3,7 +3,7 @@ const inputValidation = document.querySelector('#validation-input');
 const expectedLength = Number(inputValidation.dataset.length);
 
 function checkValidation() {
-    if (inputValidation.value.length === expectedLength){
+    if (inputValidation.value.trim().length === expectedLength){
         inputValidation.classList.remove('invalid');
         inputValidation.classList.add('valid');
     } else {
@@ -12,4 +12,4 @@ function checkValidation() {
     }
 }
 
-inputValidation,addEventListener('blur', checkValidation);
+inputValidation.addEventListener('blur', checkValidation);

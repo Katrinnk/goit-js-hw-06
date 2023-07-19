@@ -9,20 +9,16 @@ function checkForm(event) {
         elements: { email, password }
       } = event.currentTarget;
 
-    if (email.value === "" || password.value === ""){
+    if (email.value.trim() === "" || password.value.trim() === ""){
         return alert('All fields must be filled!');
     }
     
-    const formData = form.elements;
-    const formObject = {};
-
-    for (let i = 0; i < formData.length; i+=1){
-        const element = formData[i];
-        if (element.tagName === 'INPUT'){
-            formObject[element.name] = element.value;
-        }
-    };
     
+    const formObject = {
+        email: email.value,
+        password: password.value
+    };
+
 
     console.log(formObject);
     form.reset();
